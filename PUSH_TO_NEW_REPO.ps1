@@ -1,7 +1,7 @@
 # Push to New GitHub Repository
-# cursorai053-ship-it/baobab-kiosk
+# jkuma2335/baobab-kiosk
 
-Write-Host "🔄 Updating GitHub repository to cursorai053-ship-it/baobab-kiosk..." -ForegroundColor Green
+Write-Host "🔄 Updating GitHub repository to jkuma2335/baobab-kiosk..." -ForegroundColor Green
 
 # Check if git is initialized
 if (-not (Test-Path .git)) {
@@ -16,7 +16,7 @@ git remote remove origin 2>$null
 
 # Add new remote
 Write-Host "🔗 Adding new remote repository..." -ForegroundColor Yellow
-git remote add origin https://github.com/cursorai053-ship-it/baobab-kiosk.git
+git remote add origin https://github.com/jkuma2335/baobab-kiosk.git
 
 # Verify remote
 Write-Host "✅ Remote configured:" -ForegroundColor Green

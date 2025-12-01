@@ -1,6 +1,6 @@
 # 🚀 Push Your Code to GitHub
 
-Your GitHub repository is ready: **[https://github.com/cursorai053-ship-it/baobab-kiosk](https://github.com/cursorai053-ship-it/baobab-kiosk)**
+Your GitHub repository is ready: **[https://github.com/jkuma2335/baobab-kiosk](https://github.com/jkuma2335/baobab-kiosk)**
 
 Currently the repository is empty. Follow these steps to push your code:
 
@@ -13,7 +13,7 @@ Open PowerShell in your project directory (`E:\Online store`) and run:
 git init
 
 # Add remote repository
-git remote add origin https://github.com/cursorai053-ship-it/baobab-kiosk.git
+git remote add origin https://github.com/jkuma2335/baobab-kiosk.git
 ```
 
 ## Step 2: Add and Commit Files
@@ -56,12 +56,12 @@ If you encounter authentication issues, choose one:
 2. Generate new token (classic) with `repo` scope
 3. Copy the token
 4. When pushing, use:
-   - **Username**: `cursorai053-ship-it`
+   - **Username**: `jkuma2335`
    - **Password**: Paste your token
 
 ## ✅ Verify
 
-After pushing, visit: https://github.com/cursorai053-ship-it/baobab-kiosk
+After pushing, visit: https://github.com/jkuma2335/baobab-kiosk
 
 You should see all your project files!
 

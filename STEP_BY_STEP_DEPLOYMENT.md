@@ -7,7 +7,7 @@ This guide will walk you through deploying Baobab Kiosk from start to finish.
 ## 📋 Prerequisites Checklist
 
 Before we start, make sure you have:
-- [ ] GitHub account (you have: cursorai053-ship-it)
+- [ ] GitHub account (you have: jkuma2335)
 - [ ] Code pushed to GitHub (we'll do this first)
 - [ ] All required accounts ready (we'll create them)
 
@@ -38,13 +38,13 @@ git branch -M main
 ### 1.3 Add Remote Repository
 
 ```powershell
-git remote add origin https://github.com/cursorai053-ship-it/baobab-kiosk.git
+git remote add origin https://github.com/jkuma2335/baobab-kiosk.git
 ```
 
 If you get "remote origin already exists", run this first:
 ```powershell
 git remote remove origin
-git remote add origin https://github.com/cursorai053-ship-it/baobab-kiosk.git
+git remote add origin https://github.com/jkuma2335/baobab-kiosk.git
 ```
 
 ### 1.4 Add and Commit All Files
@@ -70,7 +70,7 @@ git push -u origin main
 
 ### 1.6 Verify
 
-Visit: https://github.com/cursorai053-ship-it/baobab-kiosk
+Visit: https://github.com/jkuma2335/baobab-kiosk
 - ✅ You should see all your files
 
 ---
@@ -163,7 +163,7 @@ Visit: https://github.com/cursorai053-ship-it/baobab-kiosk
 
 1. Click **"New Project"**
 2. Select **"Deploy from GitHub repo"**
-3. Find and select: **`cursorai053-ship-it/baobab-kiosk`**
+3. Find and select: **`jkuma2335/baobab-kiosk`**
 4. Railway will start importing
 
 ### 4.3 Configure Backend Settings

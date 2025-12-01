@@ -1,6 +1,6 @@
 # 📤 Push Code to GitHub
 
-Your repository is ready at: https://github.com/cursorai053-ship-it/baobab-kiosk
+Your repository is ready at: https://github.com/jkuma2335/baobab-kiosk
 
 ## Quick Setup (PowerShell)
 
@@ -23,7 +23,7 @@ Run these commands one by one:
 git init
 
 # 2. Add remote repository
-git remote add origin https://github.com/cursorai053-ship-it/baobab-kiosk.git
+git remote add origin https://github.com/jkuma2335/baobab-kiosk.git
 
 # 3. Add all files
 git add .
@@ -68,7 +68,7 @@ If you get authentication errors, you have two options:
 ## Verify Push
 
 After pushing, check:
-- Visit: https://github.com/cursorai053-ship-it/baobab-kiosk
+- Visit: https://github.com/jkuma2335/baobab-kiosk
 - You should see all your files
 
 ## Next Steps After Push
@@ -88,7 +88,7 @@ After pushing, check:
 **"remote origin already exists"**
 ```powershell
 git remote remove origin
-git remote add origin https://github.com/cursorai053-ship-it/baobab-kiosk.git
+git remote add origin https://github.com/jkuma2335/baobab-kiosk.git
 ```
 
 **"fatal: refusing to merge unrelated histories"**

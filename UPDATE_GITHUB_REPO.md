@@ -1,6 +1,6 @@
 # 🔄 Update GitHub Repository
 
-Your repository has been changed to: **https://github.com/cursorai053-ship-it/baobab-kiosk**
+Your repository has been changed to: **https://github.com/jkuma2335/baobab-kiosk**
 
 ## Quick Steps to Push to New Repository
 
@@ -18,7 +18,7 @@ git remote remove origin
 
 ```powershell
 # Add new remote repository
-git remote add origin https://github.com/cursorai053-ship-it/baobab-kiosk.git
+git remote add origin https://github.com/jkuma2335/baobab-kiosk.git
 
 # Verify
 git remote -v
@@ -62,7 +62,7 @@ git push -u origin main
 
 ## Verify
 
-After pushing, visit: **https://github.com/cursorai053-ship-it/baobab-kiosk**
+After pushing, visit: **https://github.com/jkuma2335/baobab-kiosk**
 
 You should see all your project files!
 

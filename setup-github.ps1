@@ -19,7 +19,7 @@ git branch -M main
 
 # Add remote repository
 Write-Host "🔗 Adding remote repository..." -ForegroundColor Yellow
-git remote add origin https://github.com/cursorai053-ship-it/baobab-kiosk.git
+git remote add origin https://github.com/jkuma2335/baobab-kiosk.git
 
 # Add all files
 Write-Host "📝 Adding files to git..." -ForegroundColor Yellow

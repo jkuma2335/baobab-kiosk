@@ -28,7 +28,7 @@ You're seeing: **"Project 'baobab-kiosk' already exists, please use a new name."
 
 ### Correct Vercel Configuration:
 
-1. **Repository**: Select `cursorai053-ship-it/baobab-kiosk`
+1. **Repository**: Select `jkuma2335/baobab-kiosk`
 
 2. **Framework Preset**: 
    - Select "Vite" (or "Other" if Vite not available)
@@ -59,7 +59,7 @@ You're seeing: **"Project 'baobab-kiosk' already exists, please use a new name."
 
 1. Go to: https://vercel.com/new
 2. Select: **Import Git Repository**
-3. Choose: `cursorai053-ship-it/baobab-kiosk`
+3. Choose: `jkuma2335/baobab-kiosk`
 4. If project exists, delete old one first (see Option 1 above)
 
 ### Step 2: Configure Project Settings
@@ -145,7 +145,7 @@ For now, leave environment variables empty (you'll add backend URL later).
 ## ✅ Quick Checklist
 
 - [ ] Delete old "baobab-kiosk" project in Vercel (if exists)
-- [ ] Import repository: `cursorai053-ship-it/baobab-kiosk`
+- [ ] Import repository: `jkuma2335/baobab-kiosk`
 - [ ] Set Root Directory to: `client`
 - [ ] Framework: Vite
 - [ ] Build Command: `npm run build`

@@ -7,7 +7,7 @@ Print this or keep it open while deploying. Check off each item as you complete 
 - [ ] Code is ready and working locally
 - [ ] All features tested locally
 - [ ] Git repository initialized
-- [ ] Code pushed to GitHub: https://github.com/cursorai053-ship-it/baobab-kiosk
+- [ ] Code pushed to GitHub: https://github.com/jkuma2335/baobab-kiosk
 
 ## 🗄️ MongoDB Atlas Setup
 
