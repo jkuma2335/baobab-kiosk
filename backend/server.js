@@ -67,16 +67,17 @@ app.use(requestSizeLimit);
 
 // ==================== MONGODB CONNECTION ====================
 
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('MongoDB Connected');
   })
   .catch((err) => {
     console.error('MongoDB connection error:', err);
-    process.exit(1);
+    // Don't exit in production - let server start even if DB connection fails initially
+    // Render needs the server to start quickly
+    if (process.env.NODE_ENV !== 'production') {
+      process.exit(1);
+    }
   });
 
 // ==================== ROUTES ====================
@@ -98,11 +99,21 @@ app.use('/api/upload', uploadRoutes);
 app.use('/api/deals', dealRoutes);
 
 // ==================== HEALTH CHECK ====================
+// Render needs this to respond quickly to verify deployment
 
 app.get('/', (req, res) => {
   res.json({ 
     message: 'API is running',
-    security: 'All security middleware is active'
+    security: 'All security middleware is active',
+    timestamp: new Date().toISOString()
+  });
+});
+
+// Health check endpoint for Render (responds immediately)
+app.get('/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'healthy',
+    uptime: process.uptime()
   });
 });
 
@@ -134,7 +145,8 @@ app.use((err, req, res, next) => {
 
 // ==================== START SERVER ====================
 
-app.listen(PORT, () => {
+// Listen on 0.0.0.0 to accept connections from Render
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on port ${PORT}`);
   console.log(`Security: All protections are active`);
   

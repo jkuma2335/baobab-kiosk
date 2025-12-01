@@ -6,7 +6,8 @@ const promoCodeSchema = new mongoose.Schema({
     required: true,
     unique: true,
     trim: true,
-    uppercase: true
+    uppercase: true,
+    index: true
   },
   description: {
     type: String,
@@ -63,8 +64,7 @@ const promoCodeSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Index for faster lookups
-promoCodeSchema.index({ code: 1 });
+// Index for faster lookups (code index is already created by unique: true)
 promoCodeSchema.index({ isActive: 1, startDate: 1, endDate: 1 });
 
 // Method to check if promo code is valid
