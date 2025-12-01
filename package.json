@@ -1,0 +1,23 @@
+{
+  "name": "northern-foods-online-store",
+  "version": "1.0.0",
+  "description": "Full-stack e-commerce application for Northern Ghana & Muslim-community foods",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:client\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:client": "npm run dev --prefix client",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix client"
+  },
+  "keywords": [
+    "e-commerce",
+    "northern-ghana",
+    "foods"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+

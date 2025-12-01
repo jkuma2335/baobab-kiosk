@@ -30,7 +30,7 @@ A modern, full-stack e-commerce platform for selling fresh local foods. Built wi
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/baobab-kiosk.git
+   git clone https://github.com/cursorai053-ship-it/baobab-kiosk.git
    cd baobab-kiosk
    ```
 

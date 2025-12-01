@@ -1,0 +1,14 @@
+# Render Blueprint for Backend Deployment
+services:
+  - type: web
+    name: baobab-kiosk-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      # Add your other environment variables in Render dashboard
