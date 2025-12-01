@@ -103,8 +103,8 @@ const TrackOrderPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-6 sm:py-8 md:py-12 px-3 sm:px-4">
-      <div className="container mx-auto max-w-4xl">
+    <div className="min-h-screen bg-gray-50 py-6 sm:py-8 md:py-12 px-3 sm:px-4 overflow-x-hidden w-full max-w-full">
+      <div className="container mx-auto max-w-4xl w-full">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2">Track Your Order</h1>

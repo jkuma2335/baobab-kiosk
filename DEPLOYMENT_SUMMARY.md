@@ -48,11 +48,26 @@
   - Easy setup
 
 **Backend:**
-- ✅ **Railway** (Recommended)
-  - Free $5 credit/month
-  - Easy MongoDB integration
-  - Auto-deploy from GitHub
-  - Good free tier
+- ✅ **Render.com** (⭐ Recommended - Free tier available)
+  - Free tier with auto-deploy from GitHub
+  - Easy setup via web dashboard
+  - SSL included
+  - See `DEPLOY_RENDER_QUICK.md` for quick setup
+
+- ✅ **Fly.io** (⭐ Best free tier - No sleep)
+  - Generous free tier (3 VMs, always running)
+  - No sleep time on free tier
+  - Global edge network
+  - See `DEPLOY_ALTERNATIVES.md` for setup
+
+- ⚠️ **Railway** (Limited Access - Only databases on free tier)
+  - Free $5 credit/month (but limited web service deployment)
+  - If you see "Limited Access", use Render or Fly.io instead
+
+- 💰 **DigitalOcean App Platform** ($5/month - Most reliable)
+  - Always-on service
+  - Professional-grade reliability
+  - See `DEPLOY_ALTERNATIVES.md` for setup
 
 **Database:**
 - ✅ **MongoDB Atlas** (Free M0 cluster)

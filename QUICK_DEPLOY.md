@@ -60,13 +60,20 @@ git push -u origin main
    - API Key
    - API Secret
 
-### 6. Deploy Backend - Railway (4 min)
+### 6. Deploy Backend - Render.com (⭐ Recommended) or Railway (4 min)
 
-1. Go to [railway.app](https://railway.app)
+> **⚠️ Railway has "Limited Access"?** Use Render.com instead (see `DEPLOY_RENDER_QUICK.md`)
+
+#### Option A: Render.com (⭐ Recommended - Free tier)
+
+1. Go to [render.com](https://render.com)
 2. Sign up with GitHub
-3. New Project → Deploy from GitHub
-4. Select your repository
-5. Set root directory to: `backend`
+3. Click "New +" → "Web Service"
+4. Connect repository: `jkuma2335/baobab-kiosk`
+5. Configure:
+   - Root Directory: `backend`
+   - Build Command: `npm install`
+   - Start Command: `node server.js`
 6. **Add Environment Variables:**
 
 ```
@@ -86,7 +93,17 @@ CLOUDINARY_API_SECRET=your_api_secret
    node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
    ```
 
-8. Railway will auto-deploy. **Copy the public URL**
+8. Render will auto-deploy. **Copy the public URL** (e.g., `https://baobab-kiosk-backend.onrender.com`)
+
+#### Option B: Railway (If you have access)
+
+1. Go to [railway.app](https://railway.app)
+2. Sign up with GitHub
+3. New Project → Deploy from GitHub
+4. Select your repository
+5. Set root directory to: `backend`
+6. **Add Environment Variables:** (same as above)
+7. Railway will auto-deploy. **Copy the public URL**
 
 ### 7. Update Frontend Config (1 min)
 
@@ -94,25 +111,26 @@ CLOUDINARY_API_SECRET=your_api_secret
 2. Your project → Settings → Environment Variables
 3. Add:
    ```
-   VITE_API_URL=https://your-railway-url.railway.app
+   VITE_API_URL=https://your-backend-url.onrender.com
    ```
+   (or `.railway.app` if using Railway)
 4. Redeploy (Vercel will auto-redeploy)
 
 ### 8. Update Backend CORS (1 min)
 
-1. Go to Railway dashboard
-2. Your service → Variables
+1. Go to Render/Railway dashboard
+2. Your service → Environment Variables
 3. Update `FRONTEND_URL` to your Vercel URL
-4. Railway will auto-redeploy
+4. Service will auto-redeploy
 
 ---
 
 ## ✅ Verify Deployment
 
 1. **Frontend:** Visit your Vercel URL
-2. **Backend:** Visit `https://your-railway-url.railway.app`
+2. **Backend:** Visit your backend URL (e.g., `https://your-backend-url.onrender.com`)
    - Should see: `{"message":"API is running"}`
-3. **API Test:** Visit `https://your-railway-url.railway.app/api/products`
+3. **API Test:** Visit `https://your-backend-url.onrender.com/api/products`
    - Should see products JSON
 
 ---
@@ -120,7 +138,7 @@ CLOUDINARY_API_SECRET=your_api_secret
 ## 🎯 Your Live URLs
 
 - **Frontend:** `https://your-app.vercel.app`
-- **Backend:** `https://your-backend.railway.app`
+- **Backend:** `https://your-backend.onrender.com` (or `.railway.app` if using Railway)
 
 ---
 

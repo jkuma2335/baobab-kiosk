@@ -170,9 +170,9 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#FAFAF9' }}>
+    <div className="min-h-screen overflow-x-hidden w-full max-w-full" style={{ backgroundColor: '#FAFAF9' }}>
       {/* Hero Section - Split Layout */}
-      <section className="relative overflow-hidden" style={{ 
+      <section className="relative overflow-hidden w-full" style={{ 
         background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
         borderBottomLeftRadius: '50px',
         borderBottomRightRadius: '50px',
@@ -186,7 +186,7 @@ const HomePage = () => {
         <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-green-400/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
         
-        <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32 relative z-10">
+        <div className="container mx-auto px-3 sm:px-4 py-12 sm:py-16 md:py-24 lg:py-32 relative z-10 max-w-full w-full">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Left: Text Content */}
             <div className="flex-1 text-white animate-fade-in max-w-2xl">
@@ -260,7 +260,7 @@ const HomePage = () => {
 
       {/* Featured Categories - Circular Layout */}
       <section id="categories" className="py-20" style={{ backgroundColor: '#FAFAF9' }}>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-3 sm:px-4 max-w-full w-full">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ 
               fontFamily: "'Playfair Display', serif",
@@ -383,7 +383,7 @@ const HomePage = () => {
       {/* Featured Products */}
       {featuredProducts.length > 0 && (
         <section className="py-20" style={{ backgroundColor: '#FAFAF9' }}>
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-3 sm:px-4 max-w-full w-full">
             <div className="flex items-center justify-between mb-12">
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-2" style={{ 
@@ -442,7 +442,7 @@ const HomePage = () => {
       {/* New Arrivals */}
       {newArrivals.length > 0 && (
         <section className="py-20" style={{ backgroundColor: '#FFFFFF' }}>
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-3 sm:px-4 max-w-full w-full">
             <div className="mb-12">
               <div className="inline-block mb-4">
                 <span className="px-4 py-2 rounded-full text-sm font-bold" style={{ 
@@ -646,7 +646,7 @@ const HomePage = () => {
 
       {/* Why Shop With Us - Glassmorphism Cards */}
       <section className="py-20" style={{ backgroundColor: '#FAFAF9' }}>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-3 sm:px-4 max-w-full w-full">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ 
               fontFamily: "'Playfair Display', serif",
@@ -727,7 +727,7 @@ const HomePage = () => {
 
       {/* Testimonials */}
       <section className="py-16" style={{ backgroundColor: '#FAFAF9' }}>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-3 sm:px-4 max-w-full w-full">
           <h2 className="text-3xl font-bold text-center mb-12" style={{ 
             fontFamily: "'Playfair Display', serif",
             color: '#065F46'
@@ -770,7 +770,7 @@ const HomePage = () => {
       {/* Recommended For You */}
       {recommendedProducts.length > 0 && (
         <section className="py-16" style={{ backgroundColor: '#FAFAF9' }}>
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-3 sm:px-4 max-w-full w-full">
             <h2 className="text-3xl font-bold mb-8" style={{ 
               fontFamily: "'Playfair Display', serif",
               color: '#065F46'
@@ -795,7 +795,7 @@ const HomePage = () => {
       {/* Recently Viewed Products */}
       {recentlyViewed.length > 0 && (
         <section className="py-16" style={{ backgroundColor: '#FFFFFF' }}>
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-3 sm:px-4 max-w-full w-full">
             <h2 className="text-3xl font-bold mb-8" style={{ 
               fontFamily: "'Playfair Display', serif",
               color: '#065F46'
@@ -852,7 +852,7 @@ const HomePage = () => {
       {/* Main Products Grid (if search/category filter) */}
       {(searchQuery || categoryQuery) && (
         <section className="py-16" style={{ backgroundColor: '#FAFAF9' }}>
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-3 sm:px-4 max-w-full w-full">
             <h2 className="text-3xl font-bold mb-8" style={{ 
               fontFamily: "'Playfair Display', serif",
               color: '#065F46'

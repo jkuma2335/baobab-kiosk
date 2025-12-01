@@ -7,8 +7,8 @@ const CartPage = () => {
   const total = getCartTotal();
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gray-50 overflow-x-hidden w-full max-w-full">
+      <div className="container mx-auto px-3 sm:px-4 py-6 sm:py-8 max-w-full w-full">
         <h1 className="text-3xl font-bold text-gray-800 mb-6">Shopping Cart</h1>
 
         {cartItems.length === 0 ? (
@@ -24,8 +24,8 @@ const CartPage = () => {
         ) : (
           <>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full">
+              <div className="overflow-x-auto w-full">
+                <table className="w-full min-w-full">
                   <thead className="bg-green-600 text-white">
                     <tr>
                       <th className="px-4 py-3 text-left">Product</th>

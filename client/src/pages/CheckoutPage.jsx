@@ -179,8 +179,8 @@ const CheckoutPage = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#f9fafb', fontFamily: 'Inter, system-ui, sans-serif' }}>
-      <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-6 max-w-7xl">
+    <div className="min-h-screen overflow-x-hidden w-full max-w-full" style={{ backgroundColor: '#f9fafb', fontFamily: 'Inter, system-ui, sans-serif' }}>
+      <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-6 max-w-7xl w-full">
         <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6" style={{ color: '#1f2937', fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}>
           Checkout
         </h1>

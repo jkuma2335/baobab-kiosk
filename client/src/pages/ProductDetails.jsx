@@ -126,8 +126,8 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#f9fafb', fontFamily: 'Inter, system-ui, sans-serif' }}>
-      <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-6 max-w-7xl">
+    <div className="min-h-screen overflow-x-hidden w-full max-w-full" style={{ backgroundColor: '#f9fafb', fontFamily: 'Inter, system-ui, sans-serif' }}>
+      <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-6 max-w-7xl w-full">
         {/* Breadcrumb Navigation */}
         <nav className="mb-4 sm:mb-6" aria-label="Breadcrumb">
           <ol className="flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm flex-wrap" style={{ color: '#888' }}>

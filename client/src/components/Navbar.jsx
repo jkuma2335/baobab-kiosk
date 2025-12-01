@@ -81,7 +81,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white/95 backdrop-blur-md shadow-soft sticky top-0 z-50 border-b border-gray-100">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-3 sm:px-4 py-4 max-w-full overflow-x-hidden">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
@@ -92,7 +92,7 @@ const Navbar = () => {
           </Link>
 
           {/* Search Bar - Center */}
-          <div className="flex-1 max-w-2xl mx-8 relative" ref={searchRef}>
+          <div className="flex-1 max-w-2xl mx-2 sm:mx-4 md:mx-8 relative" ref={searchRef}>
             <form onSubmit={handleSearchSubmit}>
               <div className="relative">
                 <input

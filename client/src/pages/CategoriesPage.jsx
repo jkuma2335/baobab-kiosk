@@ -72,10 +72,10 @@ const CategoriesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 overflow-x-hidden w-full max-w-full">
       {/* Header */}
-      <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-8 sm:py-12 md:py-16">
-        <div className="container mx-auto px-3 sm:px-4">
+      <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-8 sm:py-12 md:py-16 w-full">
+        <div className="container mx-auto px-3 sm:px-4 max-w-full">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
               Browse Categories
@@ -100,7 +100,7 @@ const CategoriesPage = () => {
       </div>
 
       {/* Categories Grid */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-3 sm:px-4 py-8 sm:py-12 max-w-full">
         {loading ? (
           <div className="text-center py-12">
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
@@ -207,8 +207,8 @@ const CategoriesPage = () => {
 
       {/* CTA Section */}
       {categories.length > 0 && (
-        <div className="bg-green-50 py-12">
-          <div className="container mx-auto px-4 text-center">
+        <div className="bg-green-50 py-12 w-full">
+          <div className="container mx-auto px-3 sm:px-4 text-center max-w-full">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
               Can't find what you're looking for?
             </h2>

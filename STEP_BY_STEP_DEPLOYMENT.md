@@ -150,9 +150,17 @@ Visit: https://github.com/jkuma2335/baobab-kiosk
 
 ---
 
-## STEP 4: Deploy Backend to Railway (15 minutes)
+## STEP 4: Deploy Backend (15 minutes)
 
-### 4.1 Create Railway Account
+> **⚠️ Railway Limited Access Issue?**  
+> If you see "Limited Access" on Railway (can only deploy databases), use an alternative:
+> - **Render.com** (Recommended - Free tier available) → See `DEPLOY_ALTERNATIVES.md`
+> - **Fly.io** (Best free tier - No sleep) → See `DEPLOY_ALTERNATIVES.md`
+> - **DigitalOcean** ($5/month - Most reliable) → See `DEPLOY_ALTERNATIVES.md`
+
+### Option A: Deploy to Railway
+
+#### 4.1 Create Railway Account
 
 1. Go to: **https://railway.app/**
 2. Click **"Start a New Project"**
@@ -246,7 +254,43 @@ Visit: https://github.com/jkuma2335/baobab-kiosk
 3. Test API: Add `/api/products` to the URL
    - Should see products JSON or empty array
 
-✅ **Backend is now live!**
+✅ **Backend is now live on Railway!**
+
+---
+
+### Option B: Deploy to Render.com (⭐ Recommended Alternative)
+
+> **See full guide:** `DEPLOY_ALTERNATIVES.md`
+
+**Quick Steps:**
+1. Go to: https://render.com → Sign up with GitHub
+2. Click "New +" → "Web Service"
+3. Connect repo: `jkuma2335/baobab-kiosk`
+4. Configure:
+   - **Root Directory:** `backend`
+   - **Build Command:** `npm install`
+   - **Start Command:** `node server.js`
+5. Add all environment variables (same as Railway above)
+6. Click "Create Web Service"
+7. Copy the URL (e.g., `https://baobab-kiosk-backend.onrender.com`)
+
+✅ **Backend is now live on Render!**
+
+---
+
+### Option C: Deploy to Fly.io (⭐ Best Free Tier - No Sleep)
+
+> **See full guide:** `DEPLOY_ALTERNATIVES.md`
+
+**Quick Steps:**
+1. Install Fly CLI: `powershell -Command "iwr https://fly.io/install.ps1 -useb | iex"`
+2. Sign up: `fly auth signup`
+3. Deploy: `cd backend` → `fly launch`
+4. Set secrets: `fly secrets set MONGO_URI="..."` (for each variable)
+5. Deploy: `fly deploy`
+6. Get URL: `fly info`
+
+✅ **Backend is now live on Fly.io!**
 
 ---
 

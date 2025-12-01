@@ -80,15 +80,27 @@ A modern, full-stack e-commerce platform for selling fresh local foods. Built wi
 ## 🌐 Deployment
 
 See deployment guides:
-- **[QUICK_DEPLOY.md](QUICK_DEPLOY.md)** - Fast 15-minute deployment
-- **[DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)** - Complete detailed guide
-- **[DEPLOYMENT_SUMMARY.md](DEPLOYMENT_SUMMARY.md)** - Overview
+- **[DEPLOY_RENDER_QUICK.md](DEPLOY_RENDER_QUICK.md)** - ⭐ Fastest way to deploy backend (5 min)
+- **[DEPLOY_ALTERNATIVES.md](DEPLOY_ALTERNATIVES.md)** - All backend hosting options compared
+- **[QUICK_DEPLOY.md](QUICK_DEPLOY.md)** - Complete 15-minute deployment guide
+- **[STEP_BY_STEP_DEPLOYMENT.md](STEP_BY_STEP_DEPLOYMENT.md)** - Detailed step-by-step guide
 
 ### Recommended Hosting
-- **Frontend:** Vercel (Free)
-- **Backend:** Railway or Render (Free tier available)
-- **Database:** MongoDB Atlas (Free)
-- **Images:** Cloudinary (Free tier)
+
+**Frontend:**
+- ✅ **Vercel** (Free) - Auto-deploy from GitHub
+
+**Backend:**
+- ✅ **Render.com** (⭐ Recommended - Free tier) - Easy setup, no CLI needed
+- ✅ **Fly.io** (⭐ Best free tier - No sleep) - Always running, generous free tier
+- ⚠️ **Railway** - Limited free tier (may only allow databases)
+- 💰 **DigitalOcean** ($5/month) - Most reliable paid option
+
+**Database:**
+- ✅ **MongoDB Atlas** (Free M0 cluster)
+
+**Images:**
+- ✅ **Cloudinary** (Free tier - 25GB storage)
 
 ## 📁 Project Structure
 
