@@ -74,13 +74,13 @@ const CategoriesPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
-        <div className="container mx-auto px-4">
+      <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-8 sm:py-12 md:py-16">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
               Browse Categories
             </h1>
-            <p className="text-xl text-green-100 mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-green-100 mb-6 sm:mb-8">
               Explore our wide range of product categories
             </p>
 

@@ -127,10 +127,10 @@ const ProductDetails = () => {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#f9fafb', fontFamily: 'Inter, system-ui, sans-serif' }}>
-      <div className="container mx-auto px-4 py-6 max-w-7xl">
+      <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-6 max-w-7xl">
         {/* Breadcrumb Navigation */}
-        <nav className="mb-6" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2 text-sm" style={{ color: '#888' }}>
+        <nav className="mb-4 sm:mb-6" aria-label="Breadcrumb">
+          <ol className="flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm flex-wrap" style={{ color: '#888' }}>
             <li>
               <Link to="/" className="hover:text-green-600 transition-colors flex items-center">
                 <FaHome className="mr-1" />
@@ -158,18 +158,17 @@ const ProductDetails = () => {
         </nav>
 
         <div className="bg-white rounded-xl shadow-sm overflow-hidden" style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 p-5 lg:p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-10 p-4 sm:p-5 lg:p-8">
             {/* Product Image Gallery */}
             <div className="flex flex-col space-y-4">
               {/* Main Image */}
               <div 
-                className="relative w-full overflow-hidden"
+                className="relative w-full overflow-hidden min-h-[250px] sm:min-h-[400px]"
                 style={{
                   borderRadius: '14px',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
                   border: '1px solid #f0f0f0',
-                  backgroundColor: '#fafafa',
-                  minHeight: '400px'
+                  backgroundColor: '#fafafa'
                 }}
                 onMouseEnter={() => setImageZoom(true)}
                 onMouseLeave={() => setImageZoom(false)}
@@ -186,15 +185,13 @@ const ProductDetails = () => {
                     <img
                       src={currentImage}
                       alt={product.name}
-                      className="w-full h-full object-contain transition-transform duration-500"
+                      className="w-full h-full object-contain transition-transform duration-500 p-2.5 sm:p-5 min-h-[250px] sm:min-h-[400px]"
                       style={{
-                        transform: imageZoom ? 'scale(1.1)' : 'scale(1)',
-                        padding: '20px',
-                        minHeight: '400px'
+                        transform: imageZoom ? 'scale(1.1)' : 'scale(1)'
                       }}
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center" style={{ minHeight: '400px' }}>
+                    <div className="w-full h-full flex items-center justify-center min-h-[250px] sm:min-h-[400px]">
                       <div className="text-gray-400 text-6xl">🛒</div>
                     </div>
                   );
@@ -243,9 +240,8 @@ const ProductDetails = () => {
               {/* Title */}
               <div>
                 <h1 
-                  className="mb-3"
+                  className="mb-3 text-xl sm:text-2xl md:text-3xl"
                   style={{ 
-                    fontSize: '28px', 
                     fontWeight: 700, 
                     color: '#1a1a1a',
                     fontFamily: 'Poppins, sans-serif',
@@ -276,9 +272,8 @@ const ProductDetails = () => {
               {/* Price */}
               <div>
                 <p 
-                  className="mb-1"
+                  className="mb-1 text-2xl sm:text-3xl md:text-4xl"
                   style={{ 
-                    fontSize: '32px', 
                     fontWeight: 700, 
                     color: '#2ecc71',
                     fontFamily: 'Poppins, sans-serif'
@@ -311,18 +306,18 @@ const ProductDetails = () => {
               </div>
 
               {/* Trust Icons */}
-              <div className="flex items-center space-x-6 py-2">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-6 py-2">
                 <div className="flex items-center space-x-2" style={{ color: '#555' }}>
-                  <FaCheckCircle className="text-green-600" />
-                  <span style={{ fontSize: '13px', fontWeight: 500 }}>100% Authentic</span>
+                  <FaCheckCircle className="text-green-600 text-sm sm:text-base" />
+                  <span className="text-xs sm:text-sm" style={{ fontWeight: 500 }}>100% Authentic</span>
                 </div>
                 <div className="flex items-center space-x-2" style={{ color: '#555' }}>
-                  <FaTruck className="text-green-600" />
-                  <span style={{ fontSize: '13px', fontWeight: 500 }}>Fast Delivery</span>
+                  <FaTruck className="text-green-600 text-sm sm:text-base" />
+                  <span className="text-xs sm:text-sm" style={{ fontWeight: 500 }}>Fast Delivery</span>
                 </div>
                 <div className="flex items-center space-x-2" style={{ color: '#555' }}>
-                  <FaShieldAlt className="text-green-600" />
-                  <span style={{ fontSize: '13px', fontWeight: 500 }}>Secure Payment</span>
+                  <FaShieldAlt className="text-green-600 text-sm sm:text-base" />
+                  <span className="text-xs sm:text-sm" style={{ fontWeight: 500 }}>Secure Payment</span>
                 </div>
               </div>
 
@@ -337,18 +332,18 @@ const ProductDetails = () => {
                     <button
                       onClick={() => handleQuantityChange(-1)}
                       disabled={quantity <= 1}
-                      className="p-2 hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="p-2 sm:p-2.5 hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                       style={{ borderRadius: '50% 0 0 50%' }}
                     >
-                      <Minus className="h-4 w-4" style={{ color: '#1a1a1a' }} />
+                      <Minus className="h-3 w-3 sm:h-4 sm:w-4" style={{ color: '#1a1a1a' }} />
                     </button>
                     <span 
-                      className="px-6 py-2 font-semibold"
+                      className="px-4 sm:px-6 py-2 font-semibold"
                       style={{ 
-                        minWidth: '60px', 
+                        minWidth: '50px', 
                         textAlign: 'center',
                         color: '#1a1a1a',
-                        fontSize: '16px'
+                        fontSize: '14px'
                       }}
                     >
                       {quantity}
@@ -356,10 +351,10 @@ const ProductDetails = () => {
                     <button
                       onClick={() => handleQuantityChange(1)}
                       disabled={quantity >= product.stock}
-                      className="p-2 hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="p-2 sm:p-2.5 hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                       style={{ borderRadius: '0 50% 50% 0' }}
                     >
-                      <Plus className="h-4 w-4" style={{ color: '#1a1a1a' }} />
+                      <Plus className="h-3 w-3 sm:h-4 sm:w-4" style={{ color: '#1a1a1a' }} />
                     </button>
                   </div>
                 </div>
@@ -374,11 +369,10 @@ const ProductDetails = () => {
                     ? 'hover:scale-[1.02] active:scale-[0.98]'
                     : 'cursor-not-allowed'
                 }`}
+                className="h-12 sm:h-[54px] text-sm sm:text-base"
                 style={{
                   backgroundColor: product.stock > 0 ? '#FF8C00' : '#9ca3af',
                   borderRadius: '12px',
-                  height: '54px',
-                  fontSize: '16px',
                   fontWeight: 600,
                   boxShadow: product.stock > 0 ? '0 4px 12px rgba(255, 128, 0, 0.25)' : 'none'
                 }}

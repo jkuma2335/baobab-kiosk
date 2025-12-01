@@ -103,18 +103,18 @@ const TrackOrderPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div className="min-h-screen bg-gray-50 py-6 sm:py-8 md:py-12 px-3 sm:px-4">
       <div className="container mx-auto max-w-4xl">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">Track Your Order</h1>
-          <p className="text-gray-600">
+        <div className="text-center mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2">Track Your Order</h1>
+          <p className="text-sm sm:text-base text-gray-600">
             Enter your order number to check the status of your order
           </p>
         </div>
 
         {/* Search Form */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+        <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6 sm:mb-8">
           <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-4">
             <div className="flex-1">
               <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -125,7 +125,7 @@ const TrackOrderPage = () => {
                 value={orderNumber}
                 onChange={(e) => setOrderNumber(e.target.value.toUpperCase())}
                 placeholder="e.g., ORD-20251127-1234"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 text-lg font-mono"
+                className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 text-sm sm:text-base md:text-lg font-mono"
               />
             </div>
             <div className="flex items-end">
@@ -151,11 +151,11 @@ const TrackOrderPage = () => {
         {order && (
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             {/* Order Header */}
-            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-6">
+            <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4 sm:p-6">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                 <div>
-                  <h2 className="text-2xl font-bold mb-2">Order #{order.orderNumber}</h2>
-                  <p className="text-green-100">
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2">Order #{order.orderNumber}</h2>
+                  <p className="text-sm sm:text-base text-green-100">
                     Placed on {formatDate(order.createdAt)}
                   </p>
                 </div>
@@ -175,13 +175,13 @@ const TrackOrderPage = () => {
             </div>
 
             {/* Order Info */}
-            <div className="p-6 grid md:grid-cols-2 gap-6">
+            <div className="p-4 sm:p-6 grid md:grid-cols-2 gap-4 sm:gap-6">
               {/* Customer Info */}
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">
                   Customer Information
                 </h3>
-                <div className="space-y-2 text-gray-600">
+                <div className="space-y-2 text-sm sm:text-base text-gray-600">
                   <p>
                     <span className="font-medium">Name:</span> {getCustomerName(order)}
                   </p>
@@ -202,10 +202,10 @@ const TrackOrderPage = () => {
 
               {/* Order Summary */}
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">
                   Order Summary
                 </h3>
-                <div className="space-y-2 text-gray-600">
+                <div className="space-y-2 text-sm sm:text-base text-gray-600">
                   <div className="flex justify-between">
                     <span>Total Amount:</span>
                     <span className="font-bold text-green-600 text-xl">
@@ -231,16 +231,16 @@ const TrackOrderPage = () => {
             </div>
 
             {/* Order Items */}
-            <div className="px-6 pb-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Order Items</h3>
-              <div className="space-y-4">
+            <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">Order Items</h3>
+              <div className="space-y-3 sm:space-y-4">
                 {order.items.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg border border-gray-200"
+                    className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-gray-50 rounded-lg border border-gray-200"
                   >
                     {/* Product Image */}
-                    <div className="w-20 h-20 bg-gray-200 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-200 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
                       {item.productId?.image ? (
                         <img
                           src={item.productId.image}
@@ -253,22 +253,22 @@ const TrackOrderPage = () => {
                     </div>
 
                     {/* Product Info */}
-                    <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-gray-800 truncate">
+                    <div className="flex-1 min-w-0 w-full sm:w-auto">
+                      <h4 className="font-semibold text-sm sm:text-base text-gray-800 truncate">
                         {item.productId?.name || 'Product'}
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-xs sm:text-sm text-gray-600">
                         {item.productId?.category || 'Category'} •{' '}
                         {item.productId?.unit || 'Unit'}
                       </p>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-xs sm:text-sm text-gray-500">
                         Quantity: {item.quantity} × GHS {item.price.toFixed(2)}
                       </p>
                     </div>
 
                     {/* Subtotal */}
-                    <div className="text-right">
-                      <p className="font-bold text-gray-800">
+                    <div className="text-left sm:text-right w-full sm:w-auto">
+                      <p className="font-bold text-base sm:text-lg text-gray-800">
                         GHS {(item.quantity * item.price).toFixed(2)}
                       </p>
                     </div>
@@ -278,8 +278,8 @@ const TrackOrderPage = () => {
             </div>
 
             {/* Actions */}
-            <div className="px-6 pb-6 border-t pt-6">
-              <div className="flex flex-col sm:flex-row gap-4">
+            <div className="px-4 sm:px-6 pb-4 sm:pb-6 border-t pt-4 sm:pt-6">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 {order.status === 'pending' && (
                   <Link
                     to={`/edit-order/${order._id}`}

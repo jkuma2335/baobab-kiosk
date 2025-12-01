@@ -180,19 +180,18 @@ const CheckoutPage = () => {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#f9fafb', fontFamily: 'Inter, system-ui, sans-serif' }}>
-      <div className="container mx-auto px-4 py-6 max-w-7xl">
-        <h1 className="text-3xl font-bold mb-6" style={{ color: '#1f2937', fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}>
+      <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-6 max-w-7xl">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6" style={{ color: '#1f2937', fontFamily: 'Poppins, sans-serif', fontWeight: 700 }}>
           Checkout
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
           {/* Checkout Form - 60% width */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-xl shadow-sm p-6 lg:p-8">
+            <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 lg:p-8">
               <h2 
-                className="mb-6" 
+                className="mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl" 
                 style={{ 
-                  fontSize: '22px', 
                   fontWeight: 700, 
                   color: '#1f2937',
                   fontFamily: 'Poppins, sans-serif'
