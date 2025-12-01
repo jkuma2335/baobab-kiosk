@@ -23,7 +23,7 @@ git branch -M main
 git add .
 
 # 6. Commit (if there are changes)
-git commit -m "Update: Change repository to cursorai053-ship-it"
+git commit -m "Update: Change repository to jkuma2335"
 
 # 7. Push to new repository
 git push -u origin main
