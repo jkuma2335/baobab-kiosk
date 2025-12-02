@@ -819,29 +819,29 @@ const HomePage = () => {
         <div className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-green-400/20 rounded-full blur-3xl"></div>
         
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+        <div className="container mx-auto px-3 sm:px-4 text-center relative z-10 max-w-full w-full">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4">
             Stay Updated with Fresh Stock & Deals
           </h2>
-          <p className="text-green-50 mb-10 max-w-2xl mx-auto text-lg">
+          <p className="text-green-50 mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-2">
             Get updates on fresh stock, discounts & new arrivals delivered to
             your inbox.
           </p>
           <form
             onSubmit={handleNewsletterSubmit}
-            className="max-w-lg mx-auto flex gap-3 bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20"
+            className="max-w-lg mx-auto flex flex-col sm:flex-row gap-3 bg-white/10 backdrop-blur-md p-2 sm:p-3 rounded-2xl border border-white/20"
           >
             <input
               type="email"
               value={newsletterEmail}
               onChange={(e) => setNewsletterEmail(e.target.value)}
               placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 bg-white/90 font-medium"
+              className="flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 bg-white/90 font-medium text-sm sm:text-base w-full"
               required
             />
             <button
               type="submit"
-              className="bg-gradient-to-r from-orange-500 to-orange-600 px-10 py-4 rounded-xl font-bold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 whitespace-nowrap"
+              className="bg-gradient-to-r from-orange-500 to-orange-600 px-6 sm:px-10 py-3 sm:py-4 rounded-xl font-bold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 whitespace-nowrap w-full sm:w-auto text-sm sm:text-base"
             >
               Subscribe
             </button>

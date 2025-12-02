@@ -25,6 +25,7 @@ import {
   CheckCircle2,
   ArrowRight,
   BarChart3,
+  Menu,
 } from 'lucide-react';
 
 // Animated Counter Component
@@ -174,8 +175,16 @@ const AdminDashboardPage = () => {
 
   return (
     <div className="flex min-h-screen" style={{ backgroundColor: '#FFF5F7', fontFamily: "'Lato', sans-serif" }}>
-      <AdminSidebar />
-      <div className="ml-64 flex-1 p-6">
+      <AdminSidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
+      <div className="lg:ml-64 flex-1 p-3 sm:p-4 md:p-6 w-full overflow-x-hidden">
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setSidebarOpen(true)}
+          className="lg:hidden mb-4 p-2 rounded-lg bg-white shadow-md hover:bg-pink-50 transition-colors"
+          style={{ color: '#B76E79' }}
+        >
+          <Menu className="h-6 w-6" />
+        </button>
         {/* Enhanced Header */}
         <div className="mb-6">
           <h1 className="text-3xl font-bold" style={{ fontFamily: "'Playfair Display', serif", color: '#B76E79', background: 'linear-gradient(135deg, #FF69B4 0%, #B76E79 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
@@ -198,7 +207,7 @@ const AdminDashboardPage = () => {
         ) : stats ? (
           <>
             {/* Enhanced Top Stats Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mb-4 sm:mb-6">
               {/* Total Sales Card */}
               <div className="group relative rounded-2xl shadow-lg border p-6 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 overflow-hidden" style={{ background: 'linear-gradient(135deg, #FFFFFF 0%, #FFF5F7 100%)', borderColor: '#FFB6C1', boxShadow: '0 10px 25px -5px rgba(255, 105, 180, 0.15)' }}>
                 <div className="absolute top-0 right-0 w-32 h-32 rounded-full -mr-16 -mt-16 blur-2xl" style={{ backgroundColor: 'rgba(255, 105, 180, 0.2)' }}></div>
@@ -208,7 +217,7 @@ const AdminDashboardPage = () => {
                       <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: '#4A4A4A', fontFamily: "'Poppins', sans-serif" }}>
                         Total Sales
                       </p>
-                      <p className="text-5xl font-extrabold" style={{ color: '#50C878', fontFamily: "'Playfair Display', serif" }}>
+                      <p className="text-3xl sm:text-4xl md:text-5xl font-extrabold" style={{ color: '#50C878', fontFamily: "'Playfair Display', serif" }}>
                         <AnimatedCounter
                           value={stats.totalSales}
                           decimals={2}
@@ -238,7 +247,7 @@ const AdminDashboardPage = () => {
                       <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
                         Total Orders
                       </p>
-                      <p className="text-5xl font-extrabold bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                      <p className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-transparent">
                         <AnimatedCounter value={stats.orderCount} />
                       </p>
                       <div className="mt-3 flex items-center text-xs font-medium">
@@ -263,7 +272,7 @@ const AdminDashboardPage = () => {
                       <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
                         Pending Orders
                       </p>
-                      <p className="text-5xl font-extrabold bg-gradient-to-br from-yellow-600 to-yellow-700 bg-clip-text text-transparent">
+                      <p className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-br from-yellow-600 to-yellow-700 bg-clip-text text-transparent">
                         <AnimatedCounter value={stats.pendingOrdersCount} />
                       </p>
                       <div className="mt-3 flex items-center text-xs font-medium">
@@ -282,7 +291,7 @@ const AdminDashboardPage = () => {
             </div>
 
             {/* Main Grid Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 mb-4 sm:mb-6">
               {/* Enhanced Sales Chart - Takes 2 columns */}
               <div className="lg:col-span-2 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border p-6" style={{ borderColor: '#FFB6C1', boxShadow: '0 10px 25px -5px rgba(255, 105, 180, 0.15)' }}>
                 <div className="flex items-center justify-between mb-6">
@@ -295,7 +304,7 @@ const AdminDashboardPage = () => {
                   </div>
                 </div>
                 {stats.salesOverTime && stats.salesOverTime.length > 0 ? (
-                  <ResponsiveContainer width="100%" height={320}>
+                  <ResponsiveContainer width="100%" height={280}>
                     <BarChart
                       data={stats.salesOverTime.map((item) => ({
                         ...item,
@@ -423,8 +432,8 @@ const AdminDashboardPage = () => {
                   </button>
                 </div>
               </div>
-              <div className="overflow-x-auto">
-                <table className="w-full">
+              <div className="overflow-x-auto w-full -mx-3 sm:mx-0">
+                <table className="w-full min-w-[600px] sm:min-w-0">
                   <thead className="bg-gradient-to-r from-gray-50 to-gray-100/50 border-b-2 border-gray-200">
                     <tr>
                       <th className="px-6 py-4 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
