@@ -126,6 +126,7 @@ const DetailedAnalyticsPage = () => {
   const [activeTab, setActiveTab] = useState('sales');
   const [analytics, setAnalytics] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [error, setError] = useState(null);
 
   // Filters

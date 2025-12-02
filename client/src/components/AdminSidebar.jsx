@@ -82,9 +82,9 @@ const AdminSidebar = ({ isOpen, onToggle }) => {
             <X className="h-6 w-6" />
           </button>
         </div>
-      <div className="p-6 border-b" style={{ borderColor: '#FFF5F7' }}>
-        <h2 className="text-xl font-bold" style={{ fontFamily: "'Playfair Display', serif", color: '#B76E79' }}>Admin Panel</h2>
-      </div>
+        <div className="p-6 border-b" style={{ borderColor: '#FFF5F7' }}>
+          <h2 className="text-xl font-bold" style={{ fontFamily: "'Playfair Display', serif", color: '#B76E79' }}>Admin Panel</h2>
+        </div>
       <nav className="p-4 flex flex-col h-full">
         <ul className="space-y-2 flex-1">
           {menuItems.map((item) => {
@@ -125,8 +125,9 @@ const AdminSidebar = ({ isOpen, onToggle }) => {
             <span className="font-medium" style={{ fontFamily: "'Poppins', sans-serif" }}>Log Out</span>
           </button>
         </div>
-      </nav>
-    </div>
+        </nav>
+      </div>
+    </>
   );
 };
 
