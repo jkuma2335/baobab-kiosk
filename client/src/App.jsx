@@ -18,14 +18,14 @@ const TrackOrderPage = lazy(() => import('./pages/TrackOrderPage'));
 const EditOrderPage = lazy(() => import('./pages/EditOrderPage'));
 const LoginPage = lazy(() => import('./pages/LoginPage'));
 
-// Lazy load admin pages (split into separate chunks)
-const AdminDashboardPage = lazy(() => import('./pages/admin/AdminDashboardPage'));
-const DetailedAnalyticsPage = lazy(() => import('./pages/admin/DetailedAnalyticsPage'));
-const AdminOrdersPage = lazy(() => import('./pages/admin/AdminOrdersPage'));
-const AdminProductsPage = lazy(() => import('./pages/admin/AdminProductsPage'));
-const AdminCategoriesPage = lazy(() => import('./pages/admin/AdminCategoriesPage'));
-const CategoryDetailsPage = lazy(() => import('./pages/admin/CategoryDetailsPage'));
-const AdminDealsPage = lazy(() => import('./pages/admin/AdminDealsPage'));
+// Import admin pages directly (temporarily remove lazy loading to fix blank screen)
+import AdminDashboardPage from './pages/admin/AdminDashboardPage';
+import DetailedAnalyticsPage from './pages/admin/DetailedAnalyticsPage';
+import AdminOrdersPage from './pages/admin/AdminOrdersPage';
+import AdminProductsPage from './pages/admin/AdminProductsPage';
+import AdminCategoriesPage from './pages/admin/AdminCategoriesPage';
+import CategoryDetailsPage from './pages/admin/CategoryDetailsPage';
+import AdminDealsPage from './pages/admin/AdminDealsPage';
 
 // Loading component
 const LoadingFallback = () => (
