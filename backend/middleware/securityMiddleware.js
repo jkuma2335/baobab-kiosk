@@ -32,16 +32,21 @@ const authLimiter = rateLimit({
   legacyHeaders: false,
 });
 
-// Rate limiter for order creation
+// Rate limiter for order creation/modification (POST/PUT/DELETE only)
 const orderLimiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 1 hour
-  max: 10, // Limit each IP to 10 orders per hour
+  max: 10, // Limit each IP to 10 order modifications per hour
   message: {
     success: false,
     message: 'Too many orders from this IP, please try again later.',
   },
   standardHeaders: true,
   legacyHeaders: false,
+  skip: (req) => {
+    // Skip rate limiting for GET requests (order fetching)
+    // Only apply to POST, PUT, DELETE requests
+    return req.method === 'GET';
+  },
 });
 
 // Rate limiter for promo code validation
