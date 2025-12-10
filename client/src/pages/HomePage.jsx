@@ -488,8 +488,8 @@ const HomePage = () => {
           <div className="absolute top-0 left-0 w-72 h-72 bg-orange-200/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-red-200/20 rounded-full blur-3xl"></div>
           
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-12">
+           <div className="container mx-auto px-3 sm:px-4 relative z-10 max-w-full w-full">
+             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 sm:mb-12">
               <div className="mb-4 md:mb-0">
                 <div className="inline-block mb-4">
                   <span className="px-4 py-2 bg-red-500 text-white rounded-full text-sm font-bold shadow-lg">
@@ -604,32 +604,32 @@ const HomePage = () => {
           <div className="absolute bottom-10 left-10 w-48 h-48 bg-orange-200 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-large overflow-hidden border border-white/50">
+         <div className="container mx-auto px-3 sm:px-4 relative z-10 max-w-full w-full">
+           <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-large overflow-hidden border border-white/50 w-full">
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-10 md:p-14 lg:p-16 flex flex-col justify-center bg-gradient-to-br from-white to-green-50/30">
-                <div className="mb-6">
-                  <span className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-bold mb-4">
-                    🌍 Authentic Northern Ghana
-                  </span>
-                </div>
-                <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-                  Shop Authentic Northern Ghana Foods
-                </h2>
-                <p className="text-gray-700 mb-8 text-lg leading-relaxed">
-                  Discover the rich flavors and traditions of Northern Ghana. From
-                  traditional millet balls to smoked meats, we bring authentic
-                  Northern cuisine to your doorstep.
-                </p>
-                <Link
-                  to="/products"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-green-500 text-white px-10 py-4 rounded-xl font-bold hover:from-green-700 hover:to-green-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-fit"
-                >
-                  Explore Our Products
-                  <span className="ml-2">→</span>
-                </Link>
-              </div>
-              <div className="grid grid-cols-3 gap-3 p-6 md:p-8 bg-gradient-to-br from-gray-50 to-gray-100">
+               <div className="p-6 sm:p-8 md:p-10 lg:p-14 xl:p-16 flex flex-col justify-center bg-gradient-to-br from-white to-green-50/30">
+                 <div className="mb-4 sm:mb-6">
+                   <span className="inline-block px-3 sm:px-4 py-2 bg-green-100 text-green-700 rounded-full text-xs sm:text-sm font-bold mb-3 sm:mb-4">
+                     🌍 Authentic Northern Ghana
+                   </span>
+                 </div>
+                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight">
+                   Shop Authentic Northern Ghana Foods
+                 </h2>
+                 <p className="text-gray-700 mb-6 sm:mb-8 text-sm sm:text-base md:text-lg leading-relaxed">
+                   Discover the rich flavors and traditions of Northern Ghana. From
+                   traditional millet balls to smoked meats, we bring authentic
+                   Northern cuisine to your doorstep.
+                 </p>
+                 <Link
+                   to="/products"
+                   className="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-green-500 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-xl font-bold hover:from-green-700 hover:to-green-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-fit text-sm sm:text-base"
+                 >
+                   Explore Our Products
+                   <span className="ml-2">→</span>
+                 </Link>
+               </div>
+               <div className="grid grid-cols-3 gap-2 sm:gap-3 p-4 sm:p-6 md:p-8 bg-gradient-to-br from-gray-50 to-gray-100">
                 {['🌾', '🥜', '🫒', '🔥', '🌶️', '🍗'].map((icon, i) => (
                   <div
                     key={i}
@@ -829,7 +829,7 @@ const HomePage = () => {
           </p>
           <form
             onSubmit={handleNewsletterSubmit}
-            className="max-w-lg mx-auto flex flex-col sm:flex-row gap-3 bg-white/10 backdrop-blur-md p-2 sm:p-3 rounded-2xl border border-white/20"
+            className="max-w-lg mx-auto flex flex-col sm:flex-row gap-3 bg-white/10 backdrop-blur-md p-2 sm:p-3 rounded-2xl border border-white/20 w-full sm:w-auto"
           >
             <input
               type="email"

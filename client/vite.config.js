@@ -12,37 +12,4 @@ export default defineConfig({
       },
     },
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          // React core
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          // Chart library (large)
-          'charts': ['recharts'],
-          // PDF and image processing (heavy)
-          'documents': ['jspdf', 'jspdf-autotable', 'html2canvas'],
-          // Excel processing
-          'excel': ['xlsx'],
-          // Date utilities
-          'utils': ['date-fns'],
-          // Icons (can be large if all imported)
-          'icons': ['lucide-react', 'react-icons'],
-          // Admin pages (split from main bundle)
-          'admin-dashboard': [
-            './src/pages/admin/AdminDashboardPage.jsx',
-            './src/pages/admin/DetailedAnalyticsPage.jsx',
-          ],
-          'admin-orders': ['./src/pages/admin/AdminOrdersPage.jsx'],
-          'admin-products': ['./src/pages/admin/AdminProductsPage.jsx'],
-          'admin-categories': [
-            './src/pages/admin/AdminCategoriesPage.jsx',
-            './src/pages/admin/CategoryDetailsPage.jsx',
-          ],
-          'admin-deals': ['./src/pages/admin/AdminDealsPage.jsx'],
-        },
-      },
-    },
-    chunkSizeWarningLimit: 600,
-  },
 })

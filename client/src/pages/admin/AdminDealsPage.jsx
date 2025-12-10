@@ -19,7 +19,6 @@ import {
   Users,
   Gift,
   FileText,
-  Menu,
 } from 'lucide-react';
 import { format } from 'date-fns';
 
@@ -27,7 +26,6 @@ const AdminDealsPage = () => {
   const [deals, setDeals] = useState([]);
   const [filteredDeals, setFilteredDeals] = useState([]);
   const [promoCodes, setPromoCodes] = useState([]);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [filteredPromoCodes, setFilteredPromoCodes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -259,16 +257,8 @@ const AdminDealsPage = () => {
 
   return (
     <div className="flex min-h-screen" style={{ backgroundColor: '#FFF5F7', fontFamily: "'Lato', sans-serif" }}>
-      <AdminSidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
-      <div className="lg:ml-64 flex-1 p-3 sm:p-4 md:p-6 w-full overflow-x-hidden">
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setSidebarOpen(true)}
-          className="lg:hidden mb-4 p-2 rounded-lg bg-white shadow-md hover:bg-pink-50 transition-colors"
-          style={{ color: '#B76E79' }}
-        >
-          <Menu className="h-6 w-6" />
-        </button>
+      <AdminSidebar />
+      <div className="ml-64 flex-1 p-6">
         {/* Enhanced Header */}
         <div className="mb-6">
           <div className="flex items-center justify-between">

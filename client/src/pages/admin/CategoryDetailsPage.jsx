@@ -13,7 +13,6 @@ import {
   Package2,
   AlertCircle,
   CheckCircle2,
-  Menu,
 } from 'lucide-react';
 
 const CategoryDetailsPage = () => {
@@ -27,7 +26,6 @@ const CategoryDetailsPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     fetchCategoryDetails();
@@ -120,16 +118,8 @@ const CategoryDetailsPage = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-50">
-      <AdminSidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
-      <div className="lg:ml-64 flex-1 p-3 sm:p-4 md:p-6 lg:p-8 w-full overflow-x-hidden">
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setSidebarOpen(true)}
-          className="lg:hidden mb-4 p-2 rounded-lg bg-white shadow-md hover:bg-pink-50 transition-colors"
-          style={{ color: '#B76E79' }}
-        >
-          <Menu className="h-6 w-6" />
-        </button>
+      <AdminSidebar />
+      <div className="ml-64 flex-1 p-8">
         {/* Header with Back Button */}
         <div className="mb-8">
           <Link

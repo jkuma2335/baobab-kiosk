@@ -42,7 +42,6 @@ import {
 
 const AdminOrdersPage = () => {
   const [orders, setOrders] = useState([]);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [filteredOrders, setFilteredOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -476,18 +475,8 @@ const AdminOrdersPage = () => {
 
   return (
     <div className="flex min-h-screen" style={{ backgroundColor: '#FFF5F7', fontFamily: "'Lato', sans-serif" }}>
-      <AdminSidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
-      <div className="lg:ml-64 flex-1 p-3 sm:p-4 md:p-6 w-full overflow-x-hidden">
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setSidebarOpen(true)}
-          className="lg:hidden mb-4 p-2 rounded-lg bg-white shadow-md hover:bg-pink-50 transition-colors"
-          style={{ color: '#B76E79' }}
-        >
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+      <AdminSidebar />
+      <div className="ml-64 flex-1 p-6">
         {/* Breadcrumb */}
         <nav className="mb-6">
           <div className="flex items-center space-x-2 text-sm bg-white/80 backdrop-blur-sm shadow-sm px-4 py-2.5 rounded-2xl border inline-block hover:shadow-md transition-shadow" style={{ color: '#4A4A4A', borderColor: '#FFB6C1', boxShadow: '0 4px 15px -5px rgba(255, 182, 193, 0.2)' }}>
